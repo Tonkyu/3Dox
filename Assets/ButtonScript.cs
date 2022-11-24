@@ -7,6 +7,8 @@ using TMPro;
 public class ButtonScript : MonoBehaviour
 {
 	public TextMeshProUGUI label;
+	private int row_id, col_id;
+	private string num;
 
     // Start is called before the first frame update
     void Start()
@@ -26,4 +28,11 @@ public class ButtonScript : MonoBehaviour
 		// label.text = text.text + text.text;
     }
 
+	void setNums(int _row_id, int _col_id)
+	{
+		row_id = _row_id;
+		col_id = _col_id;
+		num = (row_id * 3 + col_id + 1).ToString();
+		label.SetText(num);
+	}
 }
