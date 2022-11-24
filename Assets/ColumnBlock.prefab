@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3893181352285035687}
   - component: {fileID: 8482484174919986804}
   - component: {fileID: 3904457190713750438}
+  - component: {fileID: -1903648196186863788}
   m_Layer: 5
   m_Name: ColumnBlock
   m_TagString: Untagged
@@ -256,4 +257,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8482484174919986804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -1903648196186863788}
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-1903648196186863788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3538521653717998085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b86d0654da0d453cb88e223c324bacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 1777663230881969292}
