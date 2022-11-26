@@ -351,11 +351,12 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/BlockScript.cs"
+"Assets/Block/BlockScript.cs"
 "Assets/Buttons.cs"
 "Assets/ButtonScript.cs"
 "Assets/ColumnBlockScript.cs"
 "Assets/FieldScript.cs"
+"Assets/Resources/BallScript.cs"
 -langversion:9.0
 
 /deterministic

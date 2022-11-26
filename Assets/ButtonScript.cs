@@ -7,7 +7,9 @@ using TMPro;
 public class ButtonScript : MonoBehaviour
 {
 	public TextMeshProUGUI label;
-	private int row_id, col_id;
+	public int row_id, col_id;
+	public BlockScript[] tiedBlocks = new BlockScript[3];
+
 	private string num;
 
     // Start is called before the first frame update
@@ -24,15 +26,39 @@ public class ButtonScript : MonoBehaviour
 
     public void onClick()
     {
-        Debug.Log(label.GetParsedText());
-		// label.text = text.text + text.text;
+        // Debug.Log(label.GetParsedText());
+		// colorChange();
+		createBall(0);
+
     }
 
-	void setNums(int _row_id, int _col_id)
+	void colorChange()
 	{
-		row_id = _row_id;
-		col_id = _col_id;
-		num = (row_id * 3 + col_id + 1).ToString();
-		label.SetText(num);
+		foreach (BlockScript block in tiedBlocks)
+		{
+			block.changeColor();
+		}
+	}
+
+	void createBall(int player)
+	{
+		int change_block_num = getChangeBlockNum();
+		if(change_block_num < 0)
+		{
+			Debug.Log("Can't place Balls anymore!");
+			return;
+		}
+		tiedBlocks[change_block_num].setBall();
+	}
+
+	int getChangeBlockNum(){
+		for (int i = 0; i < tiedBlocks.Length; i++)
+		{
+			if(!tiedBlocks[i].isFilled())
+			{
+				return i;
+			}
+		}
+		return -1;
 	}
 }
