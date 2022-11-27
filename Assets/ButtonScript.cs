@@ -26,17 +26,24 @@ public class ButtonScript : MonoBehaviour
 
     public void onClick()
     {
-        // Debug.Log(label.GetParsedText());
-		// colorChange();
 		createBall(0);
-
     }
 
-	void colorChange()
+	public void onPointerEnter()
+	{
+		changeColorTo(true);
+	}
+
+	public void onPointerExit()
+	{
+		changeColorTo(false);
+	}
+
+	void changeColorTo(bool flag)	// flag = false -> default, true->selected
 	{
 		foreach (BlockScript block in tiedBlocks)
 		{
-			block.changeColor();
+			if(block.isSelected() != flag) block.changeColor();
 		}
 	}
 

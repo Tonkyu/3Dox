@@ -355,6 +355,7 @@
 "Assets/Buttons.cs"
 "Assets/ButtonScript.cs"
 "Assets/CameraController.cs"
+"Assets/CameraIconScript.cs"
 "Assets/ColumnBlockScript.cs"
 "Assets/FieldScript.cs"
 "Assets/Resources/BallScript.cs"

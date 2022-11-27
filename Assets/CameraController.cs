@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject mainCamera;
-    public GameObject basisObject;
+    public GameObject targetObject;
     public float rotate_speed;
     // Start is called before the first frame update
     void Start()
@@ -15,18 +15,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = basisObject.transform.position;
+        transform.position = targetObject.transform.position;
         //　Rotate MainCamera while left-click
         if(Input.GetMouseButton(0)){
             rotateCameraAngle();
         }
     }
-
-    /*void OnMouseDrag()
-    {
-        Debug.Log("OnMouseDrag");
-        rotateCameraAngle();
-    }*/
 
     private void rotateCameraAngle()
     {

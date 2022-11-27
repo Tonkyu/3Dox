@@ -24,7 +24,13 @@ public class BlockScript : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().material = materialSet[material_num];
     }
 
-    public bool isFilled(){
+    public bool isSelected()
+    {
+        return material_num == 1;
+    }
+
+    public bool isFilled()
+    {
         return filled_flag;
     }
 
@@ -35,7 +41,7 @@ public class BlockScript : MonoBehaviour
 
     public void setBall(){
         GameObject new_ball = (GameObject)Resources.Load("Ball");
-        Instantiate(new_ball, gameObject.transform.position, Quaternion.identity, this.transform);
+        Instantiate(new_ball, this.transform.position, Quaternion.identity, this.transform);
         switchFilledFlag();
     }
 }
