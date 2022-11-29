@@ -5,7 +5,6 @@ using UnityEngine;
 public class FieldScript : MonoBehaviour
 {
     public GameObject[,,] buttons = new GameObject[3,3,3];
-    public GameObject originBlock;
 
     // Start is called before the first frame update
     void Start()
@@ -18,4 +17,9 @@ public class FieldScript : MonoBehaviour
     {
         
     }
+
+    /*(int, int, int)[] judgeWin()
+    {
+
+    }*/
 }
